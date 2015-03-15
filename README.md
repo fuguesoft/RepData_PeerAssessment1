@@ -45,18 +45,18 @@ hist_steps_by_day = function(x, title){
         )
         
         #calculate mean and median
-        mean_value = round(mean(x, na.rm = TRUE), 1)
-        median_value = round(median(x, na.rm = TRUE), 1)
+        steps_mean = round(mean(x, na.rm = TRUE), 1)
+        steps_median = round(median(x, na.rm = TRUE), 1)
         
         #place lines for mean and median on histogram
-        abline(v=mean_value, lwd = 3, col = 'blue')
-        abline(v=median_value, lwd = 3, col = 'red')
+        abline(v=steps_mean, lwd = 3, col = 'blue')
+        abline(v=steps_median, lwd = 3, col = 'red')
         
         #create legend
         legend('topright', lty = 1, lwd = 3, col = c("blue", "red"),
                cex = .8, 
-               legend = c(paste('Mean: ', mean_value),
-               paste('Median: ', median_value))
+               legend = c(paste('Mean: ', steps_mean),
+               paste('Median: ', steps_median))
                )
 }
 
@@ -140,7 +140,7 @@ sum(is.na(data$steps))
 ```
 
 ### Devise a strategy for filling in all of the missing values in the dataset.
-We will replace NAs with the mean for that day.
+We will replace NAs with the mean for that interval
 
 ### Create a new dataset that is equal to the original dataset but with the missing data filled in.
 

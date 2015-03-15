@@ -120,7 +120,7 @@ sum(is.na(data$steps))
 ```
 
 ### Devise a strategy for filling in all of the missing values in the dataset.
-We will replace NAs with the mean for that day.
+We will replace NAs with the mean for that interval
 
 ### Create a new dataset that is equal to the original dataset but with the missing data filled in.
 ```{r}
